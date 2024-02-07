@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         crosshairs: {
-          gray: "#999",
+          gray: "#666666",
         },
       },
     },
