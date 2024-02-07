@@ -8,15 +8,18 @@ export default function HomePage() {
     <main className="min-h-screen lg:h-svh w-full grid grid-cols-1 lg:grid-cols-5 grid-rows-1 lg:grid-rows-2 overflow-hidden relative">
       <CornerCrosshairs />
       <NameCard />
-      <TopRowCard title="About" />
-      <TopRowCard title="Books" />
-      <TopRowCard title="Catalogs" />
-      <TopRowCard title="Magazines" />
-      <BottomRowCard title="Manuscripts" />
-      <BottomRowCard title="Periodicals" />
-      <BottomRowCard title="Photographs" />
-      <BottomRowCard title="Research Fellowship" />
-      <BottomRowCard title="Donate" />
+      <TopRowCard title="About" linkTo="/about" />
+      <TopRowCard title="Books" linkTo="/books" />
+      <TopRowCard title="Catalogs" linkTo="/catalogs" />
+      <TopRowCard title="Magazines" linkTo="/magazines" />
+      <BottomRowCard title="Manuscripts" linkTo="/manuscripts" />
+      <BottomRowCard title="Periodicals" linkTo="/periodicals" />
+      <BottomRowCard title="Photographs" linkTo="/photographs" />
+      <BottomRowCard
+        title="Research Fellowship"
+        linkTo="/research-fellowship"
+      />
+      <BottomRowCard title="Donate" linkTo="/donate" />
     </main>
   );
 }
