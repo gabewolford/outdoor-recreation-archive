@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function BreadcrumbsWithTitle({}) {
+export default function BreadcrumbsWithTitle({ title }) {
   const paths = usePathname();
   const pathNames = paths.split("/").filter((path) => path);
 
@@ -13,8 +13,6 @@ export default function BreadcrumbsWithTitle({}) {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
   };
-
-  const pageTitle = capitalizeWords(pathNames[pathNames.length - 1]);
 
   return (
     <section className="flex flex-col gap-12">
@@ -46,10 +44,7 @@ export default function BreadcrumbsWithTitle({}) {
           );
         })}
       </div>
-
-      {pathNames.length > 0 && (
-        <h2 className="text-[52px] leading-[1]">{pageTitle}</h2>
-      )}
+      <h2 className="text-[52px] leading-[1] mb-6">{title}</h2>
     </section>
   );
 }
