@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Outdoor Recreation Archive",
-  description: "Preserving the history of outdoor gear for future generations.",
+  description: "Preserving the history of outdoor gear.",
 };
 
 export default function RootLayout({ children }) {
