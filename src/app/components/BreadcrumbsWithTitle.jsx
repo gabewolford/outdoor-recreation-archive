@@ -3,12 +3,21 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function Breadcrumbs({}) {
+export default function BreadcrumbsWithTitle({}) {
   const paths = usePathname();
   const pathNames = paths.split("/").filter((path) => path);
 
+  const capitalizeWords = (string) => {
+    return string
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
+  const pageTitle = capitalizeWords(pathNames[pathNames.length - 1]);
+
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col gap-12">
       <div className="flex flex-row text-blue-main">
         <Link href={"/"} className="hover:text-gray-main">
           Home
@@ -17,14 +26,16 @@ export default function Breadcrumbs({}) {
 
         {pathNames.map((name, index) => {
           let href = `/${pathNames.slice(0, index + 1).join("/")}`;
-          let itemName = name;
+          let itemName = capitalizeWords(
+            name.charAt(0).toUpperCase() + name.slice(1)
+          );
 
           return (
             <div key={index}>
               <Link
                 key={index}
                 href={href}
-                className={`capitalize hover:text-gray-main ${
+                className={`hover:text-gray-main ${
                   index === pathNames.length - 1 ? "text-gray-main" : ""
                 }`}
               >
@@ -35,6 +46,10 @@ export default function Breadcrumbs({}) {
           );
         })}
       </div>
+
+      {pathNames.length > 0 && (
+        <h2 className="text-[52px] leading-[1]">{pageTitle}</h2>
+      )}
     </section>
   );
 }
