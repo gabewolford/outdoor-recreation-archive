@@ -28,10 +28,10 @@ export default function AboutPage() {
           For instructions on donating to the archive, please visit our{" "}
           <span>
             <Link
-              href="/donations"
+              href="/donate"
               className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
             >
-              Donations Page
+              Donate Page
             </Link>
           </span>
           .
