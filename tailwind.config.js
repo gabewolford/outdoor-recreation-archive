@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        crosshairs: {
-          gray: "#666666",
+        gray: {
+          main: "#666666",
+        },
+        blue: {
+          main: "#4865AF",
         },
       },
     },
