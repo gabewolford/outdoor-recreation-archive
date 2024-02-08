@@ -1,3 +1,3 @@
 export default function BooksIndexPage() {
-  return <></>;
+  return <p>Coming soon...</p>;
 }
