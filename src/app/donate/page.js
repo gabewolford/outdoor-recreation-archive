@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function DonatePage() {
   return (
     <div className="grid grid-cols-4 gap-9 lg:gap-0 lg:grid-cols-12 lg:grid-rows-3 text-sm">
