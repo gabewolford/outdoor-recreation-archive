@@ -3,7 +3,7 @@ import TheHeader from "../components/TheHeader";
 
 export default function Layout({ children }) {
   return (
-    <main className="p-3 text-sm text-gray-main">
+    <main className="p-3 text-gray-main">
       <TheHeader />
       <BreadcrumbsWithTitle title="Outdoor Recreation Magazines" />
       {children}

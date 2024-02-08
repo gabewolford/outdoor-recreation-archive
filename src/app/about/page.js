@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="grid grid-cols-4 gap-9 lg:gap-0 lg:grid-cols-12 lg:grid-rows-3">
+    <div className="grid grid-cols-4 gap-9 lg:gap-0 lg:grid-cols-12 lg:grid-rows-3 text-sm">
       <section className="flex flex-col gap-3 col-span-4 lg:col-span-5 lg:row-span-2">
         <p>
           In 2017, USU Special Collections and Archives (SCA) partnered with the

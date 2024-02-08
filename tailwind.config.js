@@ -15,6 +15,14 @@ module.exports = {
           main: "#4865AF",
         },
       },
+      fontSize: {
+        sm: [
+          "13px",
+          {
+            lineHeight: "15.73px",
+          },
+        ],
+      },
     },
   },
   plugins: [],

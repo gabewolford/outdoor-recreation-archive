@@ -15,7 +15,7 @@ export default function BreadcrumbsWithTitle({ title }) {
   };
 
   return (
-    <section className="flex flex-col gap-12">
+    <section className="flex flex-col gap-12 text-sm">
       <div className="flex flex-row text-blue-main">
         <Link href={"/"} className="hover:text-gray-main">
           Home
@@ -44,7 +44,7 @@ export default function BreadcrumbsWithTitle({ title }) {
           );
         })}
       </div>
-      <h2 className="text-[52px] leading-[1] mb-6">{title}</h2>
+      <h2 className="text-[26px] lg:text-[52px] leading-[1] mb-6">{title}</h2>
     </section>
   );
 }
