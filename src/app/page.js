@@ -5,7 +5,7 @@ import TopRowCard from "./components/Home/TopRowCard";
 
 export default function HomePage() {
   return (
-    <main className="min-h-svh max-h-svh w-full flex lg:grid lg:grid-cols-5 lg:grid-rows-2 overflow-hidden relative">
+    <main className="min-h-svh max-h-svh lg:h-svh w-full grid lg:grid-cols-5 grid-rows-1 lg:grid-rows-2 overflow-hidden relative">
       <CornerCrosshairs />
       <NameCard />
       <TopRowCard title="About" linkTo="/about" />
