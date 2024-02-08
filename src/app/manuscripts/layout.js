@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   return (
     <main className="p-3 text-gray-main">
       <TheHeader />
-      <BreadcrumbsWithTitle title="Manuscript Collections" />
+      <BreadcrumbsWithTitle title="Manuscript Collection" />
       {children}
     </main>
   );
