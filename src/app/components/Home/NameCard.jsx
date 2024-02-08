@@ -1,6 +1,6 @@
 export default function NameCard() {
   return (
-    <div className="flex flex-col h-svh max-h-svh lg:h-auto justify-between col-span-1 row-span-1 p-3 text-2xl relative">
+    <div className="flex flex-col h-svh max-h-svh overflow-hidden lg:h-auto justify-between col-span-1 row-span-1 p-3 text-2xl relative">
       {/* Bottom-left corner */}
       <div className="hidden lg:block absolute bottom-0 left-0 w-4 h-px bg-gray-main transform -translate-x-1/2 translate-y-1/2"></div>
       <div className="hidden lg:block absolute bottom-0 left-0 w-px h-4 bg-gray-main transform -translate-x-1/2 translate-y-1/2"></div>
