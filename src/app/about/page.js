@@ -49,12 +49,12 @@ export default function AboutPage() {
       <section className="grid grid-cols-4 lg:gap-0 lg:grid-cols-2 lg:col-start-7 col-span-4 lg:col-span-5 lg:row-start-2 lg:row-span-2">
         <div className="flex flex-col col-span-2 lg:col-span-1 pr-3 lg:p-3">
           <h3 className="font-medium">Using This Guide</h3>
-          <p className="mb-3">
+          <p className="mb-2">
             This guide categorizes materials in the archive by format: books,
-            catalogs, periodicals, photographs, and manuscripts. You can
-            navigate to these options using the tabs at the top of this guide.
+            catalogs, magazines, manuscripts, periodicals, and photographs. You
+            can navigate to these different categories via the home page.
           </p>
-          <p className="mb-3">
+          <p className="mb-2">
             Additionally, you can find information regarding USU Special
             Collections and Archives Outdoor Recreation Archive Research
             Fellowship{" "}
@@ -71,7 +71,7 @@ export default function AboutPage() {
         </div>
         <div className="flex flex-col col-span-2 lg:col-span-1 pl-3 lg:p-3">
           <h3 className="font-medium">Viewing The Archive</h3>
-          <p className="mb-3">
+          <p className="mb-2">
             If you find materials you'd like to view, you can do so by visiting
             the SCA Reading Room. Plan your visit{" "}
             <span>
