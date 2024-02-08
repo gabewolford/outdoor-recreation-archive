@@ -16,7 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="cursor-crosshair">
-      <body className={`${inter.className} tracking-tight`}>{children}</body>
+      <body
+        className={`${inter.className} tracking-tight flex flex-col min-h-screen w-full`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
