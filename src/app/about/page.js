@@ -131,6 +131,20 @@ export default function AboutPage() {
           >
             Mountain Gazette
           </a>
+          <a
+            href="https://designreviewed.com/the-outdoor-recreation-archive/"
+            target="_blank"
+            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+          >
+            Design Reviewed
+          </a>
+          <a
+            href="https://www.fieldmag.com/articles/outdoor-recreation-archive-vintage-camp-gear-instagram"
+            target="_blank"
+            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+          >
+            Field Mag
+          </a>
         </div>
         <div className="flex flex-col col-span-2 lg:col-span-1 pl-3 lg:p-3">
           <h3 className="font-medium">Follow Us</h3>
