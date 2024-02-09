@@ -48,10 +48,11 @@ export default function BottomRowCard({ title, linkTo, imageArray }) {
         {isHovered && imageArray.length > 0 && (
           <div className="absolute top-0 left-0 right-0 bottom-0">
             <Image
-              src={imageArray[currentIndex]}
+              src={imageArray[currentIndex].imageUrl}
               alt={`Catalog ${currentIndex + 1}`}
               fill
               objectFit="cover"
+              blurDataURL={imageArray[currentIndex].previewUrl}
             />
           </div>
         )}

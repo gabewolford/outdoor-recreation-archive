@@ -16,7 +16,7 @@ export default function TopRowCard({ title, linkTo, imageArray }) {
         setCurrentIndex((prevIndex) =>
           prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
         );
-      }, 200); // Change image every .5 seconds (adjust as needed)
+      }, 150); // Change image every .5 seconds (adjust as needed)
     }
 
     return () => clearInterval(interval);
@@ -45,10 +45,11 @@ export default function TopRowCard({ title, linkTo, imageArray }) {
         {isHovered && imageArray.length > 0 && (
           <div className="absolute top-0 left-0 right-0 bottom-0">
             <Image
-              src={imageArray[currentIndex]}
+              src={imageArray[currentIndex].imageUrl}
               alt={`Catalog ${currentIndex + 1}`}
               fill
               objectFit="cover"
+              blurDataURL={imageArray[currentIndex].previewUrl}
             />
           </div>
         )}
