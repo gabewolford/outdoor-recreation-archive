@@ -1,3 +1,3 @@
 export default function ManuscriptsIndexPage() {
-  return <></>;
+  return <p>Coming soon...</p>;
 }

@@ -1,3 +1,3 @@
 export default function PeriodicalsIndexPage() {
-  return <></>;
+  return <p>Coming soon...</p>;
 }

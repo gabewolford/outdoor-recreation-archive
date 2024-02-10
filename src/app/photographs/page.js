@@ -1,3 +1,3 @@
 export default function PhotographsIndexPage() {
-  return <></>;
+  return <p>Coming soon...</p>;
 }

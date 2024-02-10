@@ -1,3 +1,3 @@
 export default function CatalogsIndexPage() {
-  return <></>;
+  return <p>Coming soon...</p>;
 }

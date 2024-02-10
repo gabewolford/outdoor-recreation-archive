@@ -1,3 +1,3 @@
 export default function MagazinesIndexPage() {
-  return <></>;
+  return <p>Coming soon...</p>;
 }
