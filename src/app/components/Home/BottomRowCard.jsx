@@ -51,7 +51,10 @@ export default function BottomRowCard({ title, linkTo, imageArray }) {
               src={imageArray[currentIndex].imageUrl}
               alt={`Catalog ${currentIndex + 1}`}
               fill
-              objectFit="cover"
+              sizes="(min-width: 1024px) 20vw"
+              className="object-cover"
+              placeholder="blur"
+              priority={true}
               blurDataURL={imageArray[currentIndex].previewUrl}
             />
           </div>
