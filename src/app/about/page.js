@@ -96,87 +96,90 @@ export default function AboutPage() {
       <section className="grid grid-cols-4 lg:gap-0 lg:grid-cols-2 lg:col-start-7 col-span-4 lg:col-span-5 lg:row-start-3 lg:row-span-1">
         <div className="flex flex-col col-span-2 lg:col-span-1 pr-3 lg:p-3">
           <h3 className="font-medium">Press</h3>
-          <a
-            href="https://www.outsideonline.com/business-journal/issues/archiving-the-history-of-the-outdoor-industry/"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Outside Magazine
-          </a>
-          <a
-            href="https://www.gearpatrol.com/outdoors/a36412628/utah-state-university-outdoor-recreation-archive/"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Gear Patrol
-          </a>
-          <a
-            href="https://hypebeast.com/2020/11/outdoor-recreation-archive-utah-university-interview"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Hypebeast
-          </a>
-          <a
-            href="https://sabukaru.online/articles/outdoor-recreation-archive"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Subukaru Magazine
-          </a>
-          <a
-            href="https://mountaingazette.com/blogs/mountain-notes/feature-usu-outdoor-recreation-archive"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Mountain Gazette
-          </a>
-          <a
-            href="https://designreviewed.com/the-outdoor-recreation-archive/"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Design Reviewed
-          </a>
-          <a
-            href="https://www.fieldmag.com/articles/outdoor-recreation-archive-vintage-camp-gear-instagram"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Field Mag
-          </a>
+          <div className="flex flex-col gap-0.5">
+            <a
+              href="https://www.outsideonline.com/business-journal/issues/archiving-the-history-of-the-outdoor-industry/"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Outside Magazine
+            </a>
+            <a
+              href="https://www.gearpatrol.com/outdoors/a36412628/utah-state-university-outdoor-recreation-archive/"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Gear Patrol
+            </a>
+            <a
+              href="https://hypebeast.com/2020/11/outdoor-recreation-archive-utah-university-interview"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Hypebeast
+            </a>
+            <a
+              href="https://sabukaru.online/articles/outdoor-recreation-archive"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Subukaru Magazine
+            </a>
+            <a
+              href="https://mountaingazette.com/blogs/mountain-notes/feature-usu-outdoor-recreation-archive"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Mountain Gazette
+            </a>
+            <a
+              href="https://designreviewed.com/the-outdoor-recreation-archive/"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Design Reviewed
+            </a>
+            <a
+              href="https://www.fieldmag.com/articles/outdoor-recreation-archive-vintage-camp-gear-instagram"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Field Mag
+            </a>
+          </div>
         </div>
         <div className="flex flex-col col-span-2 lg:col-span-1 pl-3 lg:p-3">
           <h3 className="font-medium">Follow Us</h3>
-
-          <a
-            href="https://www.instagram.com/outdoorrecarchive/"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://www.threads.net/@outdoorrecarchive"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Threads
-          </a>
-          <a
-            href="https://www.facebook.com/outdoorrecarchive/"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Facebook
-          </a>
-          <a
-            href="https://twitter.com/Outdoor_Archive"
-            target="_blank"
-            className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
-          >
-            Twitter
-          </a>
+          <div className="flex flex-col gap-0.5">
+            <a
+              href="https://www.instagram.com/outdoorrecarchive/"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.threads.net/@outdoorrecarchive"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Threads
+            </a>
+            <a
+              href="https://www.facebook.com/outdoorrecarchive/"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://twitter.com/Outdoor_Archive"
+              target="_blank"
+              className="text-blue-main font-medium hover:text-gray-main hover:underline-offset-4 hover:underline"
+            >
+              Twitter
+            </a>
+          </div>
         </div>
       </section>
     </div>
