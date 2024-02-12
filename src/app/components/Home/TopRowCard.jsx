@@ -16,7 +16,7 @@ export default function TopRowCard({ title, linkTo, imageArray }) {
         setCurrentIndex((prevIndex) =>
           prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
         );
-      }, 150); // Change image every .5 seconds (adjust as needed)
+      }, 400); // Change image every .4 seconds (adjust as needed)
     }
 
     return () => clearInterval(interval);
