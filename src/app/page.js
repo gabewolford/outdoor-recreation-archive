@@ -26,8 +26,6 @@ export default async function HomePage() {
   const blackCovers = data[8]?.images;
   const whiteCovers = data[3]?.images;
 
-  console.log(redCovers);
-
   return (
     <main className="h-svh max-h-svh lg:grid lg:grid-cols-5 lg:grid-rows-2 overflow-hidden relative">
       <CornerCrosshairs />
