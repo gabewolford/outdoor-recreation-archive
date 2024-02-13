@@ -9,33 +9,38 @@ export default function BottomRowCard({ title, linkTo, imageArray, id }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    let interval;
+
+    if (isHovered) {
+      interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 200); // Change image every .2 seconds (adjust as needed)
+    }
+
+    return () => clearInterval(interval);
+  }, [isHovered, imageArray]);
+
+  useEffect(() => {
     const route = document.getElementById(id);
-
-    const handleMouseEnter = () => {
-      setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-      setIsHovered(false);
-    };
 
     route?.addEventListener("mouseenter", handleMouseEnter);
     route?.addEventListener("mouseleave", handleMouseLeave);
 
-    const interval = isHovered
-      ? setInterval(() => {
-          setCurrentIndex((prevIndex) =>
-            prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
-          );
-        }, 200)
-      : null;
-
     return () => {
-      route?.removeEventListener("mouseenter", handleMouseEnter);
+      route?.removeEventListener("mouseenter", handleMouseLeave);
       route?.removeEventListener("mouseleave", handleMouseLeave);
-      clearInterval(interval);
     };
-  }, [id, isHovered, imageArray]);
+  }, []);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <Link
