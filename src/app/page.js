@@ -30,39 +30,60 @@ export default async function HomePage() {
     <main className="h-svh max-h-svh lg:grid lg:grid-cols-5 lg:grid-rows-2 overflow-hidden relative">
       <CornerCrosshairs />
       <NameCard />
-      <TopRowCard title="About" linkTo="/about" imageArray={redCovers} />
-      <TopRowCard title="Books" linkTo="/books" imageArray={orangeCovers} />
+      <TopRowCard 
+        title="About" 
+        linkTo="/about" 
+        imageArray={redCovers} 
+        id="red"
+      />
+      <TopRowCard 
+        title="Books" 
+        linkTo="/books" 
+        imageArray={orangeCovers} 
+        id="orange"
+      />
       <TopRowCard
         title="Catalogs"
         linkTo="/catalogs"
         imageArray={yellowCovers}
+        id="yellow"
       />
       <TopRowCard
         title="Magazines"
         linkTo="/magazines"
         imageArray={greenCovers}
+        id="green"
       />
       <BottomRowCard
         title="Manuscripts"
         linkTo="/manuscripts"
         imageArray={blueCovers}
+        id="blue"
       />
       <BottomRowCard
         title="Periodicals"
         linkTo="/periodicals"
         imageArray={purpleCovers}
+        id="purple"
       />
       <BottomRowCard
         title="Photographs"
         linkTo="/photographs"
         imageArray={brownCovers}
+        id="brown"
       />
       <BottomRowCard
         title="Research Fellowship"
         linkTo="/research-fellowship"
         imageArray={blackCovers}
+        id="black"
       />
-      <BottomRowCard title="Donate" linkTo="/donate" imageArray={whiteCovers} />
+      <BottomRowCard 
+        title="Donate" 
+        linkTo="/donate" 
+        imageArray={whiteCovers} 
+        id="white"
+      />
     </main>
   );
 }
