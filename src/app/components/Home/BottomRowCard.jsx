@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export default function BottomRowCard({ title, linkTo, imageArray }) {
+export default function BottomRowCard({ title, linkTo, imageArray, id }) {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,11 +16,23 @@ export default function BottomRowCard({ title, linkTo, imageArray }) {
         setCurrentIndex((prevIndex) =>
           prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
         );
-      }, 400); // Change image every .4 seconds (adjust as needed)
+      }, 200); // Change image every .2 seconds (adjust as needed)
     }
 
     return () => clearInterval(interval);
   }, [isHovered, imageArray]);
+
+  useEffect(() => {
+    const route = document.getElementById(id);
+
+    route?.addEventListener("mouseenter", handleMouseEnter);
+    route?.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      route?.removeEventListener("mouseenter", handleMouseLeave);
+      route?.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -34,8 +46,7 @@ export default function BottomRowCard({ title, linkTo, imageArray }) {
     <Link
       href={linkTo}
       className="hidden lg:block col-span-1 text-lg relative overflow-hidden hover:text-white"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      id={id}
     >
       {/* Top-right corner */}
       <div className="absolute top-0 right-0 w-4 h-px bg-gray-main transform translate-x-1/2 -translate-y-1/2"></div>
