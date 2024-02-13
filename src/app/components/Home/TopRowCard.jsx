@@ -9,40 +9,33 @@ export default function TopRowCard({ title, linkTo, imageArray, id }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let interval;
-
-    if (isHovered) {
-      interval = setInterval(() => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
-        );
-      }, 400); // Change image every .4 seconds (adjust as needed)
-    }
-
-    return () => clearInterval(interval);
-  }, [isHovered, imageArray]);
-
-  useEffect(() => {
     const route = document.getElementById(id);
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+    };
+
     route?.addEventListener("mouseenter", handleMouseEnter);
-    // route?.addEventListener("mouseleave", handleMouseEnter);
-    return () => route?.removeEventListener("mouseenter", handleMouseLeave);
-      // route?.removeEventListener("mouseleave", handleMouseLeave);
-  },[])
-
-  useEffect(() => {
-    const route = document.getElementById(id);
     route?.addEventListener("mouseleave", handleMouseLeave);
-    return () => route?.removeEventListener("mouseleave", handleMouseLeave);
-  },[])
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+    const interval = isHovered
+      ? setInterval(() => {
+          setCurrentIndex((prevIndex) =>
+            prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
+          );
+        }, 200)
+      : null;
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+    return () => {
+      route?.removeEventListener("mouseenter", handleMouseEnter);
+      route?.removeEventListener("mouseleave", handleMouseLeave);
+      clearInterval(interval);
+    };
+  }, [id, isHovered, imageArray]);
 
   return (
     <Link
