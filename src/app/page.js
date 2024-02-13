@@ -11,7 +11,7 @@ export default async function HomePage() {
       color,
       images[]{
         'imageUrl': asset->url,
-        'previewUrl': asset->metadata.blurHash,
+        'previewUrl': asset->metadata.lqip,
       },
     } | order(section asc)
   `);
