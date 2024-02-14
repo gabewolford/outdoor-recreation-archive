@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "animate.css";
+import MobileMenu from "./components/MobileMenu";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} tracking-tight flex flex-col min-h-svh w-full`}
       >
+        <MobileMenu />
         {children}
       </body>
     </html>
