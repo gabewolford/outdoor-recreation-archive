@@ -63,8 +63,7 @@ export default function ResearchFellowshipPage() {
           Check out some of our past research fellows and their projects →
         </p>
         <p className="lg:hidden">
-          For information about searching and viewing the archive, please see
-          the information to the below ↓
+          Check out some of our past research fellows and their projects ↓
         </p>
         <p className="mt-9">
           <span className="font-medium">Deadlines:</span> Applicants are invited
