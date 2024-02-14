@@ -47,8 +47,7 @@ export default function MobileMenu() {
 
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 bg-white z-[9000] animate__animated animate__slideInDown flex flex-col">
-          {/* <div className="flex flex-col w-full h-12"></div> */}
-          <h3 className="flex flex-col w-full p-3 text-gray-main">
+          <h3 className="flex flex-col w-full p-3 text-gray-main font-medium">
             Outdoor Recreation Archive
           </h3>
           <div className="flex flex-col flex-1">
