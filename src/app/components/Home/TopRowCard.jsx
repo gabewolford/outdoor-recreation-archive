@@ -39,7 +39,7 @@ export default function TopRowCard({ title, linkTo, imageArray, id }) {
       route?.removeEventListener("mouseenter", handleMouseLeave);
       route?.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  });
 
   return (
     <Link

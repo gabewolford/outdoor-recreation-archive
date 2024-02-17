@@ -32,7 +32,7 @@ export default function BottomRowCard({ title, linkTo, imageArray, id }) {
       route?.removeEventListener("mouseenter", handleMouseLeave);
       route?.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  });
 
   const handleMouseEnter = () => {
     setIsHovered(true);
