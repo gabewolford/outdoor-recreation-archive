@@ -3,7 +3,7 @@ import { ImagesIcon } from "@sanity/icons";
 
 export const homeImages = {
   name: "homeImages",
-  title: "Home Images 🌈",
+  title: "Home Images",
   type: "document",
   fields: [
     defineField({
