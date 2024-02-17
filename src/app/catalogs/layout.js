@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <main className="p-3 text-gray-main">
       <TheHeader />
       <BreadcrumbsWithTitle title="Outdoor Recreation Catalogs" />
-      {children}
+      <div className="lg:grid grid-cols-12">{children}</div>
     </main>
   );
 }
