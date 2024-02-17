@@ -8,15 +8,18 @@ export default function BrandCard({
   loadingImage,
 }) {
   return (
-    <Link href={`/catalogs/${slug}`} className="flex flex-col gap-3">
+    <Link
+      href={`/catalogs/${slug}`}
+      className="flex flex-col gap-3 min-w-[140px] max-w-[140px] md:min-w-[155px] md:max-w-[155px] lg:min-w-[185px] lg:max-w-[185px]"
+    >
       <Image
         src={firstImage}
         alt={brandName}
         placeholder="blur"
         blurDataURL={loadingImage}
-        width={300}
-        height={400}
-        className="object-cover"
+        width={185}
+        height={245}
+        className="object-cover w-fit h-auto"
       />
       <p className="text-xs">{brandName}</p>
     </Link>

@@ -1,5 +1,6 @@
 import { client } from "../../../sanity/lib/client";
 import BrandCard from "../components/Catalogs/BrandCard";
+import BreadcrumbsWithTitle from "../components/BreadcrumbsWithTitle";
 
 export default async function CatalogsIndexPage() {
   const data = await client.fetch(`
@@ -39,59 +40,34 @@ export default async function CatalogsIndexPage() {
 
   return (
     <>
-      <section className="lg:col-span-12 mb-12">
+      <BreadcrumbsWithTitle title="Outdoor Recreation Catalogs" />
+
+      <section className="mb-12">
         <h2 className="text-[26px] lg:text-[39px] leading-[1] mb-6">A-F</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-3">
-          {groupedBrands.AtoF.map((brand) => (
-            <div key={brand.slug} className="col-span-1 lg:col-span-2">
-              {brand.collection.length > 0 && (
-                <BrandCard
-                  key={brand.collection[0].identifier}
-                  brandName={brand.brand}
-                  firstImage={brand.collection[0].previewImage}
-                  slug={brand.slug}
-                  loadingImage={brand.collection[0].loadingImage}
-                />
-              )}
-            </div>
+        <div className="flex flex-row gap-3 overflow-x-scroll">
+          {groupedBrands.AtoF.map((brand, index) => (
+            <BrandCard
+              key={index}
+              brandName={brand.brand}
+              firstImage={brand.collection[0].previewImage}
+              slug={brand.slug}
+              loadingImage={brand.collection[0].loadingImage}
+            />
           ))}
         </div>
       </section>
 
-      <section className="lg:col-span-12 mb-12">
+      <section className="mb-12">
         <h2 className="text-[26px] lg:text-[39px] leading-[1] mb-6">G-N</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-3">
-          {groupedBrands.GtoN.map((brand) => (
-            <div key={brand.slug} className="col-span-1 lg:col-span-2">
-              {brand.collection.length > 0 && (
-                <BrandCard
-                  key={brand.collection[0].identifier}
-                  brandName={brand.brand}
-                  firstImage={brand.collection[0].previewImage}
-                  slug={brand.slug}
-                  loadingImage={brand.collection[0].loadingImage}
-                />
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="lg:col-span-12 mb-12">
-        <h2 className="text-[26px] lg:text-[39px] leading-[1] mb-6">O-Z</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-3">
-          {groupedBrands.OtoZ.map((brand) => (
-            <div key={brand.slug} className="col-span-1 lg:col-span-2">
-              {brand.collection.length > 0 && (
-                <BrandCard
-                  key={brand.collection[0].identifier}
-                  brandName={brand.brand}
-                  firstImage={brand.collection[0].previewImage}
-                  slug={brand.slug}
-                  loadingImage={brand.collection[0].loadingImage}
-                />
-              )}
-            </div>
+        <div className="flex flex-row gap-3 overflow-x-scroll">
+          {groupedBrands.GtoN.map((brand, index) => (
+            <BrandCard
+              key={index}
+              brandName={brand.brand}
+              firstImage={brand.collection[0].previewImage}
+              slug={brand.slug}
+              loadingImage={brand.collection[0].loadingImage}
+            />
           ))}
         </div>
       </section>
