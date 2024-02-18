@@ -54,7 +54,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6">
+    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6 border border-blue-500">
       <section className="flex flex-col col-span-4 lg:col-span-5 lg:row-span-4 mb-12">
         <TheHeader title="Introduction" />
         <div className="flex flex-col gap-3">
@@ -96,8 +96,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="flex flex-row gap-6 col-span-4 lg:col-start-7 lg:col-span-5 lg:row-start-4 lg:row-span-3 text-sm mb-12">
-        <div className="flex flex-col flex-1 gap-4">
+      <section className="flex flex-col lg:flex-row gap-6 col-span-4 lg:col-start-7 lg:col-span-5 lg:row-start-4 lg:row-span-3 text-sm mb-12">
+        <div className="flex flex-col flex-1 gap-6 lg:gap-4">
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold">Using This Guide</h3>
             <p>
@@ -117,6 +117,28 @@ export default function AboutPage() {
               . Applications are accepted September 15 to December 1.
             </p>
           </div>
+
+          <div className="flex flex-col lg:hidden gap-1">
+            <h3 className="font-semibold">Viewing The Archive</h3>
+            <p>
+              If you find materials you'd like to view, you can do so by
+              visiting the SCA Reading Room. Plan your visit{" "}
+              <a
+                href="https://library.usu.edu/archives/about/using"
+                target="_blank"
+                className="underline underline-offset-4"
+              >
+                here
+              </a>
+              .
+            </p>
+            <p>
+              If you are unable to visit our Reading Room, many materials can be
+              digitized for a fee. The fee schedule can be viewed on the page
+              linked above.
+            </p>
+          </div>
+
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold">Press</h3>
             <ul className="flex flex-col gap-1">
@@ -127,9 +149,20 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
+
+          <div className="flex lg:hidden flex-col gap-1">
+            <h3 className="font-semibold">Follow Us</h3>
+            <ul className="flex flex-col gap-1">
+              {socialLinks.map((social, index) => (
+                <li key={index}>
+                  <ExternalLink text={social.platform} linkTo={social.url} />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div className="flex flex-col flex-1 gap-4">
+        <div className="hidden lg:flex flex-col flex-1 gap-4">
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold">Viewing The Archive</h3>
             <p>
@@ -150,8 +183,9 @@ export default function AboutPage() {
               linked above.
             </p>
           </div>
+
           <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">Press</h3>
+            <h3 className="font-semibold">Follow Us</h3>
             <ul className="flex flex-col gap-1">
               {socialLinks.map((social, index) => (
                 <li key={index}>
