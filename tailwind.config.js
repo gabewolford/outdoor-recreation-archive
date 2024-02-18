@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         gray: {
           main: "#666666",
+          subtext: "#8E8D8D",
         },
         blue: {
           main: "#4865AF",
@@ -17,9 +18,16 @@ module.exports = {
       },
       fontSize: {
         sm: [
-          "13px",
+          "14px",
           {
-            lineHeight: "15.73px",
+            lineHeight: "19.6px",
+            letterSpacing: "-0.28px",
+          },
+        ],
+        base: [
+          "16px",
+          {
+            lineHeight: "22.4px",
           },
         ],
       },
