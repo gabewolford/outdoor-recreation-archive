@@ -19,7 +19,7 @@ export default function BrandCard({
         blurDataURL={loadingImage}
         width={185}
         height={245}
-        className="object-cover w-fit h-auto"
+        className="object-cover w-full h-auto max-h-[250px]"
       />
       <p className="text-xs">{brandName}</p>
     </Link>
