@@ -145,7 +145,7 @@ export default function ResearchFellowshipPage() {
 
       <section className="flex flex-col gap-6 col-span-4 lg:col-start-7 lg:col-span-5 lg:row-start-3 lg:row-span-3 text-sm mb-12">
         <h2 className="text-[25px]">Apply</h2>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           <div className="flex flex-col flex-1 gap-4">
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold">Deadlines</h3>
