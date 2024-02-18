@@ -54,7 +54,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6 border border-blue-500">
+    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6">
       <section className="flex flex-col col-span-4 lg:col-span-5 lg:row-span-4 mb-12">
         <TheHeader title="Introduction" />
         <div className="flex flex-col gap-3">
