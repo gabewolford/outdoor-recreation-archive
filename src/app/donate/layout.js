@@ -1,11 +1,9 @@
-import BreadcrumbsWithTitle from "../components/BreadcrumbsWithTitle";
 import TheHeader from "../components/TheHeader";
 
 export default function Layout({ children }) {
   return (
-    <main className="p-3 text-gray-main">
-      <TheHeader />
-      <BreadcrumbsWithTitle title="Donating To The Archive" />
+    <main className="p-3">
+      <TheHeader title="Donating to the archive" />
       {children}
     </main>
   );

@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="cursor-crosshair">
       <body
-        className={`${inter.className} tracking-tight flex flex-col min-h-svh w-full`}
+        className={`${inter.className} tracking-tight flex flex-col min-h-svh w-full text-gray-main`}
       >
         <MobileMenu />
         {children}
