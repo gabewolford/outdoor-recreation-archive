@@ -19,7 +19,7 @@ export default function TheHeader({ title }) {
       <Link href="/" className="font-medium cursor-crosshair">
         Outdoor Recreation Archive
       </Link>
-      <nav className="flex flex-col gap-6 lg:gap-12 mb-12 text-sm">
+      <nav className="flex flex-col gap-6 lg:gap-12 mb-6 lg:mb-12 text-sm">
         <div className="flex flex-row text-blue-main">
           <Link href={"/"} className="hover:text-gray-main">
             Home
@@ -37,7 +37,7 @@ export default function TheHeader({ title }) {
                 <Link
                   key={index}
                   href={href}
-                  className={`hover:text-gray-main ${
+                  className={`hover:text-gray-subtext ${
                     index === pathNames.length - 1 ? "text-gray-main" : ""
                   }`}
                 >
