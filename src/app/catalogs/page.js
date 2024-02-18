@@ -1,6 +1,5 @@
 import { client } from "../../../sanity/lib/client";
-import BrandCard from "../components/Catalogs/BrandCard";
-import BreadcrumbsWithTitle from "../components/BreadcrumbsWithTitle";
+import TheHeader from "../components/TheHeader";
 import ScrollableSection from "../components/Catalogs/ScrollableSection";
 
 export default async function CatalogsIndexPage() {
@@ -41,7 +40,7 @@ export default async function CatalogsIndexPage() {
 
   return (
     <>
-      <BreadcrumbsWithTitle title="Outdoor Recreation Catalogs" />
+      <TheHeader title="Catalog collection" />
       <ScrollableSection title="A-F" brands={groupedBrands.AtoF} />
       <ScrollableSection title="G-N" brands={groupedBrands.GtoN} />
       <ScrollableSection title="O-Z" brands={groupedBrands.OtoZ} />

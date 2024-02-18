@@ -1,7 +1,7 @@
-import BreadcrumbsWithTitle from "@/app/components/BreadcrumbsWithTitle";
 import { client } from "../../../../sanity/lib/client";
 import CatalogCard from "@/app/components/Catalogs/CatalogCard";
 import { kebabCase } from "lodash";
+import TheHeader from "@/app/components/TheHeader";
 
 export async function generateStaticParams() {
   const data = await client.fetch(`
@@ -44,8 +44,7 @@ export default async function BrandIndexPage({ params }) {
 
   return (
     <>
-      <BreadcrumbsWithTitle title={pageTitle} />
-
+      <TheHeader title={pageTitle} />
       <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
         {brandCatalogs.map((brand, index) => (
           <CatalogCard

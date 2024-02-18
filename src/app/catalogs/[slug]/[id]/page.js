@@ -1,9 +1,9 @@
-import BreadcrumbsWithTitle from "@/app/components/BreadcrumbsWithTitle";
+import TheHeader from "@/app/components/TheHeader";
 
 export default async function CatalogDetailsPage() {
   return (
     <>
-      <BreadcrumbsWithTitle title="Catalog Details Page" />
+      <TheHeader title="Catalog details page" />
     </>
   );
 }
