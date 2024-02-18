@@ -1,6 +1,7 @@
 import { client } from "../../../sanity/lib/client";
 import BrandCard from "../components/Catalogs/BrandCard";
 import BreadcrumbsWithTitle from "../components/BreadcrumbsWithTitle";
+import ScrollableSection from "../components/Catalogs/ScrollableSection";
 
 export default async function CatalogsIndexPage() {
   const data = await client.fetch(`
@@ -41,36 +42,9 @@ export default async function CatalogsIndexPage() {
   return (
     <>
       <BreadcrumbsWithTitle title="Outdoor Recreation Catalogs" />
-
-      <section className="mb-12">
-        <h2 className="text-[26px] lg:text-[39px] leading-[1] mb-6">A-F</h2>
-        <div className="flex flex-row gap-3 overflow-x-scroll">
-          {groupedBrands.AtoF.map((brand, index) => (
-            <BrandCard
-              key={index}
-              brandName={brand.brand}
-              firstImage={brand.collection[0].previewImage}
-              slug={brand.slug}
-              loadingImage={brand.collection[0].loadingImage}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-[26px] lg:text-[39px] leading-[1] mb-6">G-N</h2>
-        <div className="flex flex-row gap-3 overflow-x-scroll">
-          {groupedBrands.GtoN.map((brand, index) => (
-            <BrandCard
-              key={index}
-              brandName={brand.brand}
-              firstImage={brand.collection[0].previewImage}
-              slug={brand.slug}
-              loadingImage={brand.collection[0].loadingImage}
-            />
-          ))}
-        </div>
-      </section>
+      <ScrollableSection title="A-F" brands={groupedBrands.AtoF} />
+      <ScrollableSection title="G-N" brands={groupedBrands.GtoN} />
+      <ScrollableSection title="O-Z" brands={groupedBrands.OtoZ} />
     </>
   );
 }
