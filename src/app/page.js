@@ -27,19 +27,19 @@ export default async function HomePage() {
   const whiteCovers = data[3]?.images;
 
   return (
-    <main className="h-svh max-h-svh lg:grid lg:grid-cols-5 lg:grid-rows-2 overflow-hidden relative">
+    <main className="h-svh max-h-svh lg:grid lg:grid-cols-5 lg:grid-rows-2 overflow-hidden relative text-black">
       <CornerCrosshairs />
       <NameCard />
-      <TopRowCard 
-        title="About" 
-        linkTo="/about" 
-        imageArray={redCovers} 
+      <TopRowCard
+        title="About"
+        linkTo="/about"
+        imageArray={redCovers}
         id="red"
       />
-      <TopRowCard 
-        title="Books" 
-        linkTo="/books" 
-        imageArray={orangeCovers} 
+      <TopRowCard
+        title="Books"
+        linkTo="/books"
+        imageArray={orangeCovers}
         id="orange"
       />
       <TopRowCard
@@ -78,10 +78,10 @@ export default async function HomePage() {
         imageArray={blackCovers}
         id="black"
       />
-      <BottomRowCard 
-        title="Donate" 
-        linkTo="/donate" 
-        imageArray={whiteCovers} 
+      <BottomRowCard
+        title="Donate"
+        linkTo="/donate"
+        imageArray={whiteCovers}
         id="white"
       />
     </main>
