@@ -19,9 +19,9 @@ export default function CatalogCard({
         alt={altText}
         placeholder="blur"
         blurDataURL={loadingImage}
-        width={170}
-        height={225}
-        className="object-cover w-fit h-auto"
+        width={185}
+        height={245}
+        className="object-cover w-full h-auto max-h-[350px]"
       />
       <p className="text-xs">{title}</p>
     </Link>
