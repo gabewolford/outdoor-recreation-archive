@@ -9,13 +9,8 @@ export default async function CatalogsIndexPage() {
       'slug': slug.current,
       collection[] {
         title,
-        description,
-        date,
-        source,
-        identifier,
         'previewImage': previewImage.asset->url,
         'loadingImage': previewImage.asset->metadata.lqip,
-        'file': file.asset->url,
       }
     } | order(brand asc)
   `);
