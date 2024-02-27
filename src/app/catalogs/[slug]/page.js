@@ -1,6 +1,5 @@
 import { client } from "../../../../sanity/lib/client";
 import CatalogCard from "@/app/components/Catalogs/CatalogCard";
-import { kebabCase } from "lodash";
 import TheHeader from "@/app/components/TheHeader";
 
 export async function generateStaticParams() {
@@ -25,22 +24,18 @@ export default async function BrandIndexPage({ params }) {
       'slug': slug.current,
       collection[] {
         title,
-        description,
-        date,
-        source,
-        identifier,
+        'key': _key,
         'catalogCover': previewImage.asset->url,
         'loadingImage': previewImage.asset->metadata.lqip,
-        'file': file.asset->url,
       }
     }
   `,
     { slug }
   );
 
-  const brandSlug = brandData[0].slug;
-  const pageTitle = brandData[0].brand;
-  const brandCatalogs = brandData[0].collection;
+  const brandSlug = brandData[0]?.slug;
+  const pageTitle = brandData[0]?.brand;
+  const brandCatalogs = brandData[0]?.collection;
 
   return (
     <>
@@ -52,7 +47,7 @@ export default async function BrandIndexPage({ params }) {
             altText={pageTitle}
             catalogCover={brand.catalogCover}
             slug={brandSlug}
-            id={kebabCase(brand.title)}
+            id={brand.key}
             loadingImage={brand.loadingImage}
             title={brand.title}
           />
