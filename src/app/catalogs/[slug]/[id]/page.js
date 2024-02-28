@@ -58,27 +58,6 @@ export default async function CatalogDetailsPage({ params }) {
   const date = catalogDetails?.date;
   const identifier = catalogDetails?.identifier;
 
-  const today = new Date();
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const month = months[today.getMonth()];
-  const day = today.getDate();
-  const year = today.getFullYear();
-  const formattedDate = month + " " + day + ", " + year;
-  console.log(formattedDate);
-
   return (
     <>
       <BreadcrumbsOnly lastBreadcrumb={title} />
