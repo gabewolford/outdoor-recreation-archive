@@ -82,18 +82,18 @@ export default async function CatalogDetailsPage({ params }) {
   return (
     <>
       <BreadcrumbsOnly lastBreadcrumb={title} />
-      <main className="grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6 gap-6 lg:gap-0">
+      <main className="grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-5">
         <Image
           src={catalogCover}
           alt={brandName}
-          className="col-span-4 lg:col-span-5 lg:row-span-5 flex w-full h-auto object-cover"
+          className="col-span-4 lg:col-span-5 lg:row-start-1 lg:row-span-5 flex w-full h-auto object-cover"
           width={350}
           height={450}
           placeholder="blur"
           blurDataURL={loadingImage}
         />
-        <section className="col-span-4 lg:col-span-5 lg:col-start-7 lg:row-span-1 text-sm flex flex-row lg:gap-6">
-          <div className="flex lg:w-1/2 lg:max-w-1/2"></div>
+        <section className="col-span-4 lg:col-span-5 lg:col-start-7 lg:row-start-1 lg:row-span-1 text-sm flex flex-row md:gap-6 py-4 lg:pt-16">
+          <div className="hidden lg:flex lg:w-1/2 lg:max-w-1/2"></div>
           <div className="flex flex-col gap-1 lg:w-1/2 lg:max-w-1/2">
             <h3 className="font-semibold">Citation</h3>
             <p>
@@ -110,9 +110,10 @@ export default async function CatalogDetailsPage({ params }) {
             </p>
           </div>
         </section>
+        <Pagination />
         <section className="col-span-4 lg:col-span-5 lg:col-start-7 lg:row-start-3 lg:row-span-4 text-sm flex flex-col gap-6 mb-12">
-          <Pagination />
-          <div className="flex flex-col md:flex-row gap-6">
+          {/* <Pagination /> */}
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:w-1/2">
               <div className="flex flex-col gap-1">
                 <h3 className="font-semibold">Title</h3>

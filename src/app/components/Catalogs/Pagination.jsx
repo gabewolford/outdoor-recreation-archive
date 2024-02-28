@@ -19,7 +19,7 @@ export default function Pagination({ currentIndex, totalItems }) {
   };
 
   return (
-    <div className="flex-row gap-2 hidden md:flex">
+    <div className="flex-row gap-2 hidden lg:flex lg:col-start-7 lg:col-span-5 lg:row-start-2 items-end text-sm mb-3">
       <Link
         href="/catalogs"
         onClick={handlePrevPage}
