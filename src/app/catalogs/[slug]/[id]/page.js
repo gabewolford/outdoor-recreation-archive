@@ -71,7 +71,7 @@ export default async function CatalogDetailsPage({ params }) {
           placeholder="blur"
           blurDataURL={loadingImage}
         />
-        <section className="col-span-4 lg:col-span-5 lg:col-start-7 lg:row-start-1 lg:row-span-1 text-sm flex flex-row md:gap-6 py-4 lg:pt-16">
+        <section className="col-span-4 lg:col-span-5 lg:col-start-7 lg:row-start-1 lg:row-span-1 text-sm flex flex-row md:gap-6 py-4">
           <div className="hidden lg:flex lg:w-1/2 lg:max-w-1/2"></div>
           <div className="flex flex-col gap-1 lg:w-1/2 lg:max-w-1/2">
             <h3 className="font-semibold">Citation</h3>
