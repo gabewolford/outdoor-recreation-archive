@@ -20,7 +20,7 @@ export default function BreadcrumbsOnly({ lastBreadcrumb }) {
         Outdoor Recreation Archive
       </Link>
       <nav className="flex flex-col gap-6 lg:gap-12 mb-3 text-sm">
-        <div className="flex flex-row text-blue-main">
+        <div className="flex flex-row flex-wrap text-blue-main">
           <Link href={"/"} className="hover:text-gray-main">
             Home
           </Link>
