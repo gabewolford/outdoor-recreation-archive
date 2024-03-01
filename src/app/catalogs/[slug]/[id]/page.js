@@ -57,20 +57,27 @@ export default async function CatalogDetailsPage({ params }) {
   const source = catalogDetails?.source;
   const date = catalogDetails?.date;
   const identifier = catalogDetails?.identifier;
+  const pdfFile = catalogDetails?.file;
 
   return (
     <>
       <BreadcrumbsOnly lastBreadcrumb={title} />
       <main className="grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-5">
-        <Image
-          src={catalogCover}
-          alt={brandName}
-          className="col-span-4 lg:col-span-5 lg:row-start-1 lg:row-span-5 flex w-full h-auto object-cover"
-          width={350}
-          height={450}
-          placeholder="blur"
-          blurDataURL={loadingImage}
-        />
+        <a
+          href={pdfFile}
+          className="col-span-4 lg:col-span-5 lg:row-start-1 lg:row-span-5 hover:opacity-90"
+          target="_blank"
+        >
+          <Image
+            src={catalogCover}
+            alt={brandName}
+            className="flex w-full h-auto object-cover"
+            width={350}
+            height={450}
+            placeholder="blur"
+            blurDataURL={loadingImage}
+          />
+        </a>
         <section className="col-span-4 lg:col-span-5 lg:col-start-7 lg:row-start-1 lg:row-span-1 text-sm flex flex-row md:gap-6 py-4">
           <div className="hidden lg:flex lg:w-1/2 lg:max-w-1/2"></div>
           <div className="flex flex-col gap-1 lg:w-1/2 lg:max-w-1/2">
