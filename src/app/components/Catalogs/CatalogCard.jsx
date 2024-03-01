@@ -12,7 +12,7 @@ export default function CatalogCard({
   return (
     <Link
       href={`/catalogs/${slug}/${id}`}
-      className="col-span-1 flex flex-col gap-3"
+      className="col-span-1 flex flex-col gap-3 hover:opacity-90"
     >
       <Image
         src={catalogCover}

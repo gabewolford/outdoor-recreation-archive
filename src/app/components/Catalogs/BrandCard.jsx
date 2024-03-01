@@ -10,7 +10,7 @@ export default function BrandCard({
   return (
     <Link
       href={`/catalogs/${slug}`}
-      className="flex flex-col gap-3 min-w-[140px] max-w-[140px] md:min-w-[155px] md:max-w-[155px] lg:min-w-[185px] lg:max-w-[185px]"
+      className="flex flex-col gap-3 min-w-[140px] max-w-[140px] md:min-w-[155px] md:max-w-[155px] lg:min-w-[185px] lg:max-w-[185px] hover:opacity-90"
     >
       <Image
         src={firstImage}
