@@ -20,7 +20,7 @@ export default function ScrollableSection({ title, brands }) {
 
   return (
     <section className="mb-12">
-      <div className="flex flex-row gap-6 items-center mb-6 w-fit relative">
+      <div className="flex flex-row gap-6 items-center mb-6 w-full relative">
         <h2 className="text-[25px] leading-[1]">{title}</h2>
         {/* Search Input */}
         <input
