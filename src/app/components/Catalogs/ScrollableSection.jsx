@@ -8,6 +8,7 @@ export default function ScrollableSection({ title, brands }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredBrands, setFilteredBrands] = useState(brands);
   const [isHovered, setHovered] = useState(false);
+  const [isSectionHovered, setSectionHovered] = useState(false);
   const [isActive, setActive] = useState(false);
 
   const handleSearch = (event) => {
@@ -65,7 +66,15 @@ export default function ScrollableSection({ title, brands }) {
         </div>
       </div>
 
-      <div className="flex flex-row gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-main/60 scrollbar-track-transparent pb-3 h-[300px]">
+      <div
+        className={`flex flex-row gap-3 overflow-x-auto pb-3 h-[300px] ${
+          isSectionHovered
+            ? "scrollbar-thin scrollbar-thumb-gray-main/60 scrollbar-track-transparent"
+            : "scrollbar-none"
+        }`}
+        onMouseEnter={() => setSectionHovered(true)}
+        onMouseLeave={() => setSectionHovered(false)}
+      >
         {/* Brand Cards */}
         {filteredBrands.map((brand, index) => (
           <BrandCard
