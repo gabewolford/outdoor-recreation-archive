@@ -10,6 +10,44 @@ export default function ScrollableSection({ title, brands }) {
   const [isHovered, setHovered] = useState(false);
   const [isSectionHovered, setSectionHovered] = useState(false);
   const [isActive, setActive] = useState(false);
+  const [isDragging, setDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const inputRef = useRef(null);
+
+  const handleMouseDown = (e) => {
+    if (inputRef.current) {
+      setDragging(true);
+      setStartX(e.pageX - inputRef.current.offsetLeft);
+      setScrollLeft(inputRef.current.scrollLeft);
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging || !inputRef.current) return;
+    const x = e.pageX - inputRef.current.offsetLeft;
+    const walk = (x - startX) * 0.5; // Adjust the multiplier for a smoother scrolling effect
+    inputRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
+
+  useEffect(() => {
+    if (isDragging) {
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+    } else {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    }
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isDragging]);
 
   const handleSearch = (event) => {
     const query = event.target.value;
@@ -21,8 +59,6 @@ export default function ScrollableSection({ title, brands }) {
 
     setFilteredBrands(filtered);
   };
-
-  const inputRef = useRef(null);
 
   useEffect(() => {
     if (isActive) {
@@ -67,13 +103,15 @@ export default function ScrollableSection({ title, brands }) {
       </div>
 
       <div
-        className={`flex flex-row gap-3 overflow-x-auto pb-3 h-[300px] ${
+        className={`flex flex-row gap-3 lg:gap-0 overflow-x-auto pb-3 h-[300px] ${
           isSectionHovered
             ? "scrollbar-thin scrollbar-thumb-gray-main/60 scrollbar-track-transparent"
             : "scrollbar-none"
         }`}
         onMouseEnter={() => setSectionHovered(true)}
         onMouseLeave={() => setSectionHovered(false)}
+        onMouseDown={handleMouseDown}
+        ref={inputRef}
       >
         {/* Brand Cards */}
         {filteredBrands.map((brand, index) => (
