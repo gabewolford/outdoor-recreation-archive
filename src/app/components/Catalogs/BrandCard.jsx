@@ -38,9 +38,13 @@ export default function BrandCard({
         blurDataURL={loadingImage}
         width={185}
         height={245}
-        className="object-cover w-full h-auto max-h-[250px]"
+        className={`object-cover w-full h-auto max-h-[250px] ${
+          isDragging ? "cursor-grabbing" : ""
+        }`}
       />
-      <p className="text-xs">{brandName}</p>
+      <p className={`text-xs ${isDragging ? "cursor-grabbing" : ""}`}>
+        {brandName}
+      </p>
     </Link>
   );
 }
