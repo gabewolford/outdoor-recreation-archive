@@ -1,11 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import BrandCard from "./BrandCard";
+import SearchIcon from "./UI/SearchIcon";
 
 export default function ScrollableSection({ title, brands }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredBrands, setFilteredBrands] = useState(brands);
+  const [isHovered, setHovered] = useState(false);
+  const [isActive, setActive] = useState(false);
 
   const handleSearch = (event) => {
     const query = event.target.value;
@@ -18,18 +21,48 @@ export default function ScrollableSection({ title, brands }) {
     setFilteredBrands(filtered);
   };
 
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (isActive) {
+      inputRef.current.focus();
+    }
+  }, [isActive]);
+
   return (
     <section className="mb-12">
-      <div className="flex flex-row gap-6 items-center mb-6 w-full relative">
-        <h2 className="text-[25px] leading-[1]">{title}</h2>
-        {/* Search Input */}
-        <input
-          type="text"
-          placeholder="Search by brand"
-          value={searchQuery}
-          onChange={handleSearch}
-          className="p-2 border-[0.25px] border-gray-main/30 h-full focus:outline-blue-main/90 focus:rounded-none text-sm flex-1 md:flex-none"
-        />
+      <div className="flex flex-row gap-6 items-center mb-6 w-full">
+        <h2 className="text-[25px] md:text-[32px] leading-[1]">{title}</h2>
+        <div
+          className={`relative flex flex-row items-center flex-1 text-[25px] md:text-[32px] leading-[1] h-fit gap-2.5 border-b  ${
+            isActive ? "border-b-[#BFBFBF]" : "border-b-white"
+          }`}
+        >
+          <div
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={() => setActive(!isActive)}
+          >
+            <SearchIcon strokeColor={isHovered ? "#666666" : "#BFBFBF"} />
+          </div>
+          {isActive ? (
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearch}
+              className="focus:outline-none w-full"
+              ref={inputRef}
+            />
+          ) : (
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearch}
+              className="focus:outline-none w-full bg-white cursor-crosshair"
+              disabled
+            />
+          )}
+        </div>
       </div>
 
       <div className="flex flex-row gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-main/60 scrollbar-track-transparent pb-3 h-[300px]">
