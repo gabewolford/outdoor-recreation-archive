@@ -2,6 +2,11 @@ import Link from "next/link";
 import TheHeader from "../components/TheHeader";
 import PastFellowCard from "../components/Research-Fellowship/PastFellowCard";
 
+export const metadata = {
+  title: "Research Fellowship | Outdoor Recreation Archive",
+  description: "Preserving the history of outdoor gear.",
+};
+
 export default function ResearchFellowshipPage() {
   const pastFellows = [
     {

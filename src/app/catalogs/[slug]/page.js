@@ -2,6 +2,11 @@ import { client } from "../../../../sanity/lib/client";
 import CatalogCard from "@/app/components/Catalogs/CatalogCard";
 import TheHeader from "@/app/components/TheHeader";
 
+export const metadata = {
+  title: "Catalog Collection | Outdoor Recreation Archive",
+  description: "Preserving the history of outdoor gear.",
+};
+
 export async function generateStaticParams() {
   const data = await client.fetch(`
     *[_type == 'catalogIndex']{

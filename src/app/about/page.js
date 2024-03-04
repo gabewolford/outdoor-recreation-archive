@@ -2,6 +2,11 @@ import Link from "next/link";
 import TheHeader from "../components/TheHeader";
 import ExternalLink from "../components/About/ExternalLink";
 
+export const metadata = {
+  title: "About | Outdoor Recreation Archive",
+  description: "Preserving the history of outdoor gear.",
+};
+
 export default function AboutPage() {
   const pressLinks = [
     {

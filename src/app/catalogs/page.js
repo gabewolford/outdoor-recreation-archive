@@ -2,6 +2,11 @@ import { client } from "../../../sanity/lib/client";
 import TheHeader from "../components/TheHeader";
 import ScrollableSection from "../components/Catalogs/ScrollableSection";
 
+export const metadata = {
+  title: "Catalogs | Outdoor Recreation Archive",
+  description: "Preserving the history of outdoor gear.",
+};
+
 export default async function CatalogsIndexPage() {
   const data = await client.fetch(`
     *[_type == 'catalogIndex']{

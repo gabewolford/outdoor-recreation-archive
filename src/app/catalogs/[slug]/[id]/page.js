@@ -4,6 +4,11 @@ import Pagination from "@/app/components/Catalogs/Pagination";
 import { client } from "../../../../../sanity/lib/client";
 import CurrentDate from "@/app/components/Catalogs/CurrentDate";
 
+export const metadata = {
+  title: "Catalog Details | Outdoor Recreation Archive",
+  description: "Preserving the history of outdoor gear.",
+};
+
 export async function generateStaticParams() {
   const data = await client.fetch(`
     *[_type == 'catalogIndex']{

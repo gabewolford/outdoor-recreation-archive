@@ -1,5 +1,10 @@
 import TheHeader from "../components/TheHeader";
 
+export const metadata = {
+  title: "Donate | Outdoor Recreation Archive",
+  description: "Preserving the history of outdoor gear.",
+};
+
 export default function DonatePage() {
   return (
     <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6">
