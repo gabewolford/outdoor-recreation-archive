@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "animate.css";
 import MobileMenu from "./components/MobileMenu";
+import { Analytics } from "@vercel/analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       >
         <MobileMenu />
         {children}
+        <Analytics />
       </body>
     </html>
   );
