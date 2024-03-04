@@ -11,8 +11,9 @@ export default function ResearchFellowshipPage() {
         "Assistant Professor of Art, University of Tennessee Chattanooga and Assistant Professor, Florida State University, respectively",
       description:
         "Art installation entitled “A straight line: history, design, and use”",
-      linkText: "Podcast coming soon",
-      podcastUrl: null,
+      linkText: "Listen to the podcast",
+      podcastUrl:
+        "https://open.spotify.com/episode/7iEqlZphN7Q7aTB4UNfJBv?si=6181e24354ab468e",
     },
     {
       year: 2023,
@@ -21,8 +22,9 @@ export default function ResearchFellowshipPage() {
         "Creator of 'Articles of Interest', a podcast about what we wear",
       description:
         "Art installation entitled “A straight line: history, desA multi-part podcast series about outdoor fashion",
-      linkText: "Podcast coming soon",
-      podcastUrl: null,
+      linkText: "Listen to the podcast",
+      podcastUrl:
+        "https://open.spotify.com/episode/6maL1vwjIOiWgBlqReZ9vR?si=81d8a5fd98594af6",
     },
     {
       year: 2022,
