@@ -2,7 +2,30 @@ import TheHeader from "../components/TheHeader";
 
 export const metadata = {
   title: "Donate | Outdoor Recreation Archive",
-  description: "Preserving the history of outdoor gear.",
+  description:
+    "We greatly appreciate any support for the archive and are always accepting donations of materials such as books, catalogs, magazines, periodicals, and photographs, as well as monetary donations.",
+  keywords:
+    "Outdoor, outdoors, recreation, archive, media archive, outdoor recreation archive, books, catalogs, magazines, manuscripts, periodicals, photographs, utah state university, outdoor product design and development, outdoor catalogs, outdoor history",
+  openGraph: {
+    title: "Outdoor Recreation Archive",
+    description: "Preserving the history of outdoor gear.",
+    siteName: "Outdoor Recreation Archive",
+    type: "website",
+    locale: "en_US",
+    url: "https://outdoorrecreationarchive.com/donate",
+    images: [
+      {
+        url: "https://outdoorrecreationarchive.com/images/og-image.png",
+        alt: "Outdoor Recreation Archive",
+      },
+    ],
+  },
+  images: [
+    {
+      url: "https://outdoorrecreationarchive.com/images/og-image.png",
+      alt: "Outdoor Recreation Archive",
+    },
+  ],
 };
 
 export default function DonatePage() {

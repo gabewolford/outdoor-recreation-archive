@@ -4,10 +4,57 @@ import Pagination from "@/app/components/Catalogs/Pagination";
 import { client } from "../../../../../sanity/lib/client";
 import CurrentDate from "@/app/components/Catalogs/CurrentDate";
 
-export const metadata = {
-  title: "Catalog Details | Outdoor Recreation Archive",
-  description: "Preserving the history of outdoor gear.",
-};
+export async function generateMetadata({ params }) {
+  const { id } = params;
+
+  const brandData = await client.fetch(
+    `
+    *[_type == 'catalogIndex' && count(collection[_key == $id]) > 0]{
+      brand,
+      'slug': slug.current,
+      collection[] {
+        _key,
+        title,
+        description,
+        'imageUrl': previewImage.asset->url
+      }[_key == $id]
+    }
+  `,
+    { id }
+  );
+
+  const brandName = brandData[0]?.brand;
+  const brandSlug = brandData[0]?.slug;
+  const catalogTitle = brandData[0]?.collection[0]?.title;
+  const catalogDescription = brandData[0]?.collection[0]?.description;
+  const catalogImagePreview = brandData[0]?.collection[0]?.imageUrl;
+
+  return {
+    title: `${brandName} | ${catalogTitle}`,
+    description: `${catalogDescription}`,
+    keywords: `${brandName}, Outdoor, outdoors, recreation, archive, media archive, outdoor recreation archive, books, catalogs, magazines, manuscripts, periodicals, photographs, utah state university, outdoor product design and development, outdoor catalogs, outdoor history`,
+    openGraph: {
+      title: `${brandName} | ${catalogTitle}`,
+      description: `${catalogDescription}`,
+      siteName: "Outdoor Recreation Archive",
+      type: "website",
+      locale: "en_US",
+      url: `https://outdoorrecreationarchive.com/catalogs/${brandSlug}/${id}`,
+      images: [
+        {
+          url: `${catalogImagePreview}`,
+          alt: `${catalogTitle}`,
+        },
+      ],
+    },
+    images: [
+      {
+        url: `${catalogImagePreview}`,
+        alt: `${catalogTitle}`,
+      },
+    ],
+  };
+}
 
 export async function generateStaticParams() {
   const data = await client.fetch(`

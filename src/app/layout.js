@@ -14,6 +14,28 @@ const inter = Inter({
 export const metadata = {
   title: "Outdoor Recreation Archive",
   description: "Preserving the history of outdoor gear.",
+  keywords:
+    "Outdoor, outdoors, recreation, archive, media archive, outdoor recreation archive, books, catalogs, magazines, manuscripts, periodicals, photographs, utah state university, outdoor product design and development, outdoor catalogs, outdoor history",
+  openGraph: {
+    title: "Outdoor Recreation Archive",
+    description: "Preserving the history of outdoor gear.",
+    siteName: "Outdoor Recreation Archive",
+    type: "website",
+    locale: "en_US",
+    url: "https://outdoorrecreationarchive.com",
+    images: [
+      {
+        url: "https://outdoorrecreationarchive.com/images/og-image.png",
+        alt: "Outdoor Recreation Archive",
+      },
+    ],
+  },
+  images: [
+    {
+      url: "https://outdoorrecreationarchive.com/images/og-image.png",
+      alt: "Outdoor Recreation Archive",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
