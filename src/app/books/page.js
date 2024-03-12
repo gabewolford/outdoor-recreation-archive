@@ -1,3 +1,5 @@
+import TheHeader from "../components/TheHeader";
+
 export const metadata = {
   title: "Books | Outdoor Recreation Archive",
   description:
@@ -27,5 +29,10 @@ export const metadata = {
 };
 
 export default function BooksIndexPage() {
-  return <p>Coming soon...</p>;
+  return (
+    <main className="p-3 animate__animated animate__fadeIn">
+      <TheHeader title="Book collection" />
+      <p>Coming soon...</p>
+    </main>
+  );
 }

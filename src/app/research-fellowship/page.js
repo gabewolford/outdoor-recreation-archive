@@ -82,7 +82,7 @@ export default function ResearchFellowshipPage() {
   const fellows2022 = pastFellows.filter((fellow) => fellow.year === 2022);
 
   return (
-    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6">
+    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6 animate__animated animate__fadeIn">
       <section className="flex flex-col col-span-4 lg:col-span-5 lg:row-span-6 mb-6 lg:mb-0">
         <TheHeader title="Research fellowship" />
         <div className="flex flex-col gap-3 mb-12">

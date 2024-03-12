@@ -62,11 +62,11 @@ export default async function CatalogsIndexPage() {
   });
 
   return (
-    <>
+    <main className="p-3 animate__animated animate__fadeIn">
       <TheHeader title="Catalog collection" />
       <ScrollableSection title="A-F" brands={groupedBrands.AtoF} />
       <ScrollableSection title="G-N" brands={groupedBrands.GtoN} />
       <ScrollableSection title="O-Z" brands={groupedBrands.OtoZ} />
-    </>
+    </main>
   );
 }

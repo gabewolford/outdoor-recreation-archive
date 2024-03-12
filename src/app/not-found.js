@@ -10,7 +10,7 @@ export default function Error({ error }) {
   }, [error]);
 
   return (
-    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6">
+    <main className="p-3 grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-6 animate__animated animate__fadeIn">
       <section className="flex flex-col col-span-4 lg:col-span-5 lg:row-span-4 mb-12">
         <BreadcrumbsOnly lastBreadcrumb="Page Not Found" />
         <div className="flex flex-col gap-6 lg:gap-12 mt-3 lg:mt-9 mb-6 lg:mb-12">

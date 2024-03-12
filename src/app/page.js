@@ -27,7 +27,7 @@ export default async function HomePage() {
   const whiteCovers = data[3]?.images;
 
   return (
-    <main className="h-svh max-h-svh lg:grid lg:grid-cols-5 lg:grid-rows-2 overflow-hidden relative text-black">
+    <main className="h-svh max-h-svh lg:grid lg:grid-cols-5 lg:grid-rows-2 overflow-hidden relative text-black animate__animated animate__fadeIn">
       <CornerCrosshairs />
       <NameCard />
       <TopRowCard

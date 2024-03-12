@@ -112,9 +112,9 @@ export default async function CatalogDetailsPage({ params }) {
   const pdfFile = catalogDetails?.file;
 
   return (
-    <>
+    <main className="p-3 animate__animated animate__fadeIn">
       <BreadcrumbsOnly lastBreadcrumb={title} />
-      <main className="grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-5">
+      <section className="grid grid-cols-4 lg:grid-cols-12 lg:grid-rows-5">
         <a
           href={pdfFile}
           className="col-span-4 lg:col-span-5 lg:row-start-1 lg:row-span-5 hover:opacity-90"
@@ -209,7 +209,7 @@ export default async function CatalogDetailsPage({ params }) {
             </div>
           </div>
         </section>
-      </main>
-    </>
+      </section>
+    </main>
   );
 }
