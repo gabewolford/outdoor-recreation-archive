@@ -5,6 +5,7 @@
 import { visionTool } from "@sanity/vision";
 import { defineConfig, isDev } from "sanity";
 import { structureTool } from "sanity/structure";
+import { vercelDeployTool } from "sanity-plugin-vercel-deploy";
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env";
@@ -14,9 +15,12 @@ export default defineConfig({
   basePath: "/admin",
   projectId,
   dataset,
-  // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: isDev
-    ? [structureTool(), visionTool({ defaultApiVersion: apiVersion })]
-    : [structureTool()],
+    ? [
+        structureTool(),
+        visionTool({ defaultApiVersion: apiVersion }),
+        vercelDeployTool(),
+      ]
+    : [structureTool(), vercelDeployTool()],
 });
