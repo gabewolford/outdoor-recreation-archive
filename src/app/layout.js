@@ -3,6 +3,7 @@ import "./globals.css";
 import "animate.css";
 import MobileMenu from "./components/MobileMenu";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "animate.css";
 
 const inter = Inter({
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
         <MobileMenu />
         {children}
         <Analytics />
+        <GoogleAnalytics gaId="G-69EP29S22Y" />
       </body>
     </html>
   );
