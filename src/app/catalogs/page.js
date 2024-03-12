@@ -62,7 +62,7 @@ export default async function CatalogsIndexPage() {
   });
 
   return (
-    <main className="p-3 animate__animated animate__fadeIn">
+    <main className="p-3 animate__animated animate__fadeIn mb-12">
       <TheHeader title="Catalog collection" />
       <ScrollableSection title="A-F" brands={groupedBrands.AtoF} />
       <ScrollableSection title="G-N" brands={groupedBrands.GtoN} />

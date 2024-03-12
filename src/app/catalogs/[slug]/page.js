@@ -80,7 +80,7 @@ export default async function BrandIndexPage({ params }) {
   const brandCatalogs = brandData[0]?.collection;
 
   return (
-    <main className="p-3 animate__animated animate__fadeIn">
+    <main className="p-3 mb-12 animate__animated animate__fadeIn">
       <TheHeader title={pageTitle} />
       <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
         {brandCatalogs.map((brand, index) => (
