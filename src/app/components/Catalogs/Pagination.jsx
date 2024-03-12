@@ -27,7 +27,7 @@ export default function Pagination({ currentIndex, totalItems }) {
         onClick={() => router.back()}
         className="text-blue-main font-semibold hover:text-gray-subtext"
       >
-        Go back
+        ← Go back
       </button>
       {/* <Link
         href="/catalogs"
