@@ -88,7 +88,7 @@ export default function BottomRowCard({ title, linkTo, imageArray, id }) {
       <h3
         className={`${
           isHovered ? "absolute" : "hidden"
-        } top-0 left-0 lg:text-7xl xl:text-[136px] 2xl:text-[184px] text-white p-3`}
+        } top-0 left-0 lg:text-9xl xl:text-[136px] 2xl:text-[184px] text-white p-3`}
       >
         {title}
       </h3>
