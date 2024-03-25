@@ -44,7 +44,7 @@ export default function TopRowCard({ title, linkTo, imageArray, id }) {
   return (
     <Link
       href={linkTo}
-      className="route hidden lg:block col-span-1 text-lg relative overflow-hidden hover:text-white"
+      className="route hidden lg:block col-span-1 text-lg relative hover:text-white"
       id={id}
     >
       {/* Top-left corner */}

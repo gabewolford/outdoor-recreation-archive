@@ -45,7 +45,7 @@ export default function BottomRowCard({ title, linkTo, imageArray, id }) {
   return (
     <Link
       href={linkTo}
-      className="hidden lg:block col-span-1 text-lg relative overflow-hidden hover:text-white"
+      className="hidden lg:block col-span-1 text-lg relative hover:text-white"
       id={id}
     >
       {/* Top-right corner */}
@@ -55,7 +55,7 @@ export default function BottomRowCard({ title, linkTo, imageArray, id }) {
       <div className="absolute bottom-0 right-0 w-4 h-px bg-gray-main transform translate-x-1/2 translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-px h-4 bg-gray-main transform translate-x-1/2 translate-y-1/2"></div>
       {/* Content */}
-      <div className="relative overflow-hidden h-full">
+      <div className="relative h-full">
         {isHovered && imageArray.length > 0 && (
           <div className="absolute top-0 left-0 right-0 bottom-0">
             <Image
